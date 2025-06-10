@@ -20,66 +20,75 @@
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 <style>
-.scroll-wrapper {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
+ .carousel-container {
+      margin-top: 40px;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      height: 200px;
+      background: #056608;
+    }
 
-.scroll-track {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 20s linear infinite;
-}
+    .carousel-track {
+      display: inline-flex;
+      animation: scroll-left 30s linear infinite;
+    }
 
-.team-member {
-  flex: 0 0 auto;
-  width: 250px;
-  margin-right: 20px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  height: 250px;
-}
-.team-member:hover {
-  transform: scale(1.05);
-}
+    .carousel-track img {
+      width: 200px;
+      height: 200px;
+      object-fit: fill;
+      margin-right: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
 
-/* Scrolling animation */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+    .carousel-track img:hover {
+      transform: scale(1.05);
+    }
 
-/* Modal styles */
-.image-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
 
-.image-modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  transition: transform 0.3s;
-}
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal img {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      animation: zoom-out 0.5s ease;
+    }
+
+    @keyframes zoom-out {
+      from {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
 </style>
 
 
@@ -124,7 +133,7 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li class="scroll-to-section"><a href="#top" class="active">HOME</a></li>
-                      <li class="scroll-to-section"><a href="#services">ABOUT US</a></li>
+                      <li class="scroll-to-section"><a href="#aboutsure">ABOUT US</a></li>
                       <li class="scroll-to-section"><a href="#courses">SERVICES</a></li>
                       <li class="scroll-to-section"><a href="#team">GALLERY</a></li>
                       <!-- <li class="scroll-to-section"><a href="#events">Events</a></li> -->
@@ -200,7 +209,7 @@ worldwide.</p>
   </div>
 
   
-  <div class="section about-us">
+  <div class="section about-us" id="aboutsure">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-1">
@@ -276,7 +285,7 @@ entry into
           <div class="section-heading">
             <!-- <h6>About Us</h6> -->
             <h2>🏡 Welcome to Suremercies Tutors</h2>
-            <p>At Suremercies Tutors, we believe every child deserves the opportunity to thrive, regardless of their
+            <p style="text-align: justify;">At Suremercies Tutors, we believe every child deserves the opportunity to thrive, regardless of their
 starting point - whether they are catching up, keeping up, or surging ahead. Since 2021, we have provided
 expert-led ,flexible learning support, tailored academic and enrichment tutoring to students from
 Preschool to A-Levels, both at home and online, across Nigeria, the UK, Canada, the USA, and beyond.
@@ -297,7 +306,7 @@ provide expert guidance every step of the way.</p>
   </div>
 
 
-  <div class="services section" id="services">
+  <div class="services section" id="s">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-6">
@@ -350,21 +359,15 @@ through curriculum mastery, 21st century innovation, and consistent parental eng
           
            <ul style="text-align: left; " class="event_filter">
             <h6 style="color: #fff;"> Why Parents Choose Us</h6>
-            
-        <li>
-          Trusted by homeschooling mums and busy professionals
-        </li><br>
-        <li>
-          1:1 expert tutoring for foundational to advanced learners
-        </li><br>
-        <li>
-         Weekly feedback and progress reports
-        </li><br>
-        <li>
-          Flexible, affordable plans with global reach
-        </li><br>
-        <li>Curriculum: Nigerian | British | American | IB | Montessori</li><br>
-        <li>80% of our families come via referral</li>
+            <p style="color: white;">
+              ●Trusted by homeschooling mums and busy professionals<br>
+● 1:1 expert tutoring for foundational to advanced learners<br>
+● Weekly feedback and progress reports<br>
+● Flexible, affordable plans with global reach<br>
+● Curriculum: Nigerian | British | American | IB | Montessori<br>
+● 80% of our families come via referral
+            </p>
+        
         <p style="color: #fff;">Schedule a free learning consultation today. Chat with our academic team on <a href="">WhatsApp</a></p>
       </ul>
 
@@ -376,15 +379,19 @@ through curriculum mastery, 21st century innovation, and consistent parental eng
 parents, schools, and students who want more than just average results. We aim for excellence with care,
 consistency, and strategy</p>
           <h6 style="text-align: left; color:#fff;"> Who We Serve</h6>
-          <ul style="text-align: left; color:#fff; ">
-            <li>Busy parents seeking academic continuity at home or online</li>
-            <li>Homeschooling mums</li>
-            <li>Students with learning gaps or curriculum transitions</li>
-            <li>Gifted and talented learners needing enrichment or extension</li>
-            <li>Diaspora families seeking culturally attuned, curriculum-aligned tutoring</li>
-            <li>Students preparing for transitions into secondary school, college or university</li>
-          </ul>
-      </ul>
+          <p style="color: white; text-align: left;">
+            ●Busy parents seeking academic continuity at home or online<br>
+            ● Homeschooling mums<br>
+● Students with learning gaps or curriculum transitions<br>
+● Gifted and talented learners needing enrichment or extension<br>
+● Diaspora families seeking culturally attuned, curriculum-aligned tutoring<br>
+● Students preparing for transitions into secondary school, college or university<br>
+Our clientele includes satisfied families across Lagos, Ogun, Abuja, and growing networks in the UK,
+Canada, and the US.
+          </p>
+
+         
+      
 
         </div>
       </div>
@@ -398,7 +405,7 @@ consistency, and strategy</p>
         <div class="col-lg-12 text-center">
           <div class="section-heading">
             <!-- <h6>Latest Courses</h6> -->
-            <h2>Our Services</h2>
+            <h2 style="color:#056608">Our Services</h2>
           </div>
         </div>
       </div>
@@ -427,9 +434,9 @@ group classes in person and online.</span> -->
             </div>
             <div style="background-color: #fff; color:#056608;" class="down-content">
               <!-- <span class="author">Stella Blair</span> -->
-               <span class="category">From phonics and foundational maths to A-Level physics and literature, we offer tailored 1-on-1 and
-group classes in person and online.</span>
-              <h4>Home & Online Tutoring</h4>
+               <p style="text-align: justify; color:#056608;" class="category">From phonics and foundational maths to A-Level physics and literature, we offer tailored 1-on-1 and
+group classes in person and online.</p>
+              <h4 style=" color:#056608;">Home & Online Tutoring</h4>
             </div>
           </div>
         </div>
@@ -441,10 +448,10 @@ group classes in person and online.</span>
               <!-- <span class="price"><h6><em>$</em>340</h6></span> -->
             </div>
             <div style="background-color: #fff; color:#056608;" class="down-content">
-              <span class="category">Structured and expertly guided learning for families choosing home education, including curriculum
-planning, progress monitoring, and academic coaching.</span>
+              <p style="text-align: justify; color:#056608;" class="category">Structured and expertly guided learning for families choosing home education, including curriculum
+planning, progress monitoring, and academic coaching.</p>
               <!-- <span class="author">Cindy Walker</span> -->
-              <h4>Homeschooling Support</h4>
+              <h4 style=" color:#056608;">Homeschooling Support</h4>
             </div>
           </div>
         </div>
@@ -457,10 +464,10 @@ planning, progress monitoring, and academic coaching.</span>
             </div>
             <div style="background-color: #fff; color:#056608;" class="down-content">
               <!-- <span class="author">David Hutson</span> -->
-               <span class="category">
+               <p style="text-align: justify; color:#056608;" class="category">
                 We help students prepare for: SAT, ACT, BECE, IGCSE, Checkpoint, WASSCE, JAMB, Post-UTME.
-              </span>
-              <h4>Exam Preparation</h4>
+              </p>
+              <h4 style=" color:#056608;">Exam Preparation</h4>
             </div>
           </div>
         </div>
@@ -473,8 +480,8 @@ planning, progress monitoring, and academic coaching.</span>
             </div>
             <div style="background-color: #fff; color:#056608;" class="down-content">
               <!-- <span class="author">Stella Blair</span> -->
-               <span class="category">Customised IEPs and expert tutors trained in working with dyslexia, ADHD, autism, and learning delays.</span>
-              <h4>Special Needs Support</h4>
+               <p style="text-align: justify; color:#056608;" class="category">Customised IEPs and expert tutors trained in working with dyslexia, ADHD, autism, and learning delays.</p>
+              <h4 style=" color:#056608;">Special Needs Support</h4>
             </div>
           </div>
         </div>
@@ -487,8 +494,8 @@ planning, progress monitoring, and academic coaching.</span>
             </div>
             <div style="background-color: #fff; color:#056608;" class="down-content">
               <!-- <span class="author">Sophia Rose</span> -->
-               <span class="category">Fun and foundational courses in programming, robotics, web design, and more</span>
-              <h4>Coding & Digital Skills for Kids</h4>
+               <p style="text-align: justify; color:#056608;" class="category">Fun and foundational courses in programming, robotics, web design, and more</p>
+              <h4 style=" color:#056608;">Coding & Digital Skills for Kids</h4>
             </div>
           </div>
         </div>
@@ -501,8 +508,8 @@ planning, progress monitoring, and academic coaching.</span>
             </div>
             <div style="background-color: #fff; color:#056608;" class="down-content">
               <!-- <span class="author">David Hutson</span> -->
-               <span class="category">We guide families in choosing the right-fit schools locally and abroad, with prep support for admissions</span>
-              <h4>School Placement Consulting</h4>
+               <p style="text-align: justify; color:#056608;" class="category">We guide families in choosing the right-fit schools locally and abroad, with prep support for admissions</p>
+              <h4 style=" color:#056608;">School Placement Consulting</h4>
             </div>
           </div>
         </div>
@@ -610,82 +617,23 @@ planning, progress monitoring, and academic coaching.</span>
     </div>
   </div>  -->
 
- <div class="team section" id="team"> 
-  <div class="container">
-    <div class="scroll-wrapper">
-      <div class="scroll-track" id="scrollTrack">
-        <!-- Repeatable card -->
-        <div class="team-member" onclick="showImage(this)">
-          <div class="main-content">
-            <img src="assets/images/flyer 1.jpg" alt="">
-            <!-- <span class="category">UX Teacher</span> -->
-            <!-- <h4>Sophia Rose</h4> -->
-          </div>
-        </div>
-        <div class="team-member" onclick="showImage(this)">
-          <div class="main-content">
-            <img src="assets/images/tutors profile 2.jpg" alt="">
-            <!-- <span class="category">Graphic Teacher</span> -->
-            <!-- <h4>Cindy Walker</h4> -->
-          </div>
-        </div>
-        <!-- Add more as needed -->
-          <div class="team-member" onclick="showImage(this)">
-          <div class="main-content">
-            <img src="assets/images/FLYER 3.jpg" alt="">
-            <!-- <span class="category">Graphic Teacher</span> -->
-            <!-- <h4>Cindy Walker</h4> -->
-          </div>
-        </div>
-        <!-- Add more as needed -->
-          <div class="team-member" onclick="showImage(this)">
-          <div class="main-content">
-            <img src="assets/images/testimonial uk.jpg" alt="">
-            <!-- <span class="category">Graphic Teacher</span> -->
-            <!-- <h4>Cindy Walker</h4> -->
-          </div>
-        </div>
-        <!-- Add more as needed -->
-          <div class="team-member" onclick="showImage(this)">
-          <div class="main-content">
-            <img src="assets/images/tutors profile 4.jpg" alt="">
-            <!-- <span class="category">Graphic Teacher</span> -->
-            <!-- <h4>Cindy Walker</h4> -->
-          </div>
-        </div>
-        <!-- Add more as needed -->
-        <div class="team-member" onclick="showImage(this)">
-          <div class="main-content">
-            <img src="assets/images/tutors profile 2.jpg" alt="">
-            <!-- <span class="category">Graphic Teacher</span> -->
-            <!-- <h4>Cindy Walker</h4> -->
-          </div>
-        </div>
-        <!-- Add more as needed -->
-        <div class="team-member" onclick="showImage(this)">
-          <div class="main-content">
-            <img src="assets/images/flyer 5.jpg" alt="">
-            <!-- <span class="category">Graphic Teacher</span> -->
-            <!-- <h4>Cindy Walker</h4> -->
-          </div>
-        </div>
-        <!-- Add more as needed -->
-        <div class="team-member" onclick="showImage(this)">
-          <div class="main-content">
-            <img src="assets/images/testimonial 2.jpg" alt="">
-            <!-- <span class="category">Graphic Teacher</span> -->
-            <!-- <h4>Cindy Walker</h4> -->
-          </div>
-        </div>
-        <!-- Add more as needed -->
-      </div>
-    </div>
+  <div id="team" class="carousel-container">
+  <div class="carousel-track" id="imageTrack">
+    <img src="assets/images/flyer 1.jpg" alt="kitten 1">
+    <img src="assets/images/testimonia uk.jpg" alt="kitten 2">
+    <img src="assets/images/FLYER 3.jpg" alt="kitten 3">
+    <img src="assets/images/testimonial 2.jpg" alt="kitten 4">
+    <img src="assets/images/flyer 5.jpg" alt="kitten 5">
+    <img src="assets/images/tech event.jpg" alt="kitten 5">
+    <img src="assets/images/FLYER 2.jpg" alt="kitten 5">
+    <img src="assets/images/tutors profile 2.jpg" alt="kitten 5">
+    <img src="assets/images/tutors profile 6.jpg" alt="kitten 5">
+    <!-- repeat as needed -->
   </div>
 </div>
 
-<!-- Modal popup for zoomed image -->
-<div class="image-modal" id="imageModal" onclick="closeModal()">
-  <img id="modalImage" src="" alt="Zoomed image">
+<div class="modal" id="imageModal" onclick="closeModal()">
+  <img id="modalImage" src="" alt="Zoomed">
 </div>
 
 
@@ -693,6 +641,14 @@ planning, progress monitoring, and academic coaching.</span>
   <div class="section testimonials">
     <div class="container">
       <div class="row">
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading">
+            <!-- <h6>TESTIMONIALS</h6> -->
+            <h2>What Our Clients Say</h2>
+            <p>Our testimonials reflect not just academic success, but holistic growth, students winning school awards,
+launching their own apps, and exceeding expectations.</p>
+          </div>
+        </div>
         <div class="col-lg-7">
           <div class="owl-carousel owl-testimonials">
             <div class="item">
@@ -747,14 +703,7 @@ she breaks them down for me. She is one of the reasons why my grades are improvi
             </div>
           </div>
         </div>
-        <div class="col-lg-5 align-self-center">
-          <div class="section-heading">
-            <!-- <h6>TESTIMONIALS</h6> -->
-            <h2>What Our Clients Say</h2>
-            <p>Our testimonials reflect not just academic success, but holistic growth, students winning school awards,
-launching their own apps, and exceeding expectations.</p>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -869,22 +818,19 @@ launching their own apps, and exceeding expectations.</p>
   </div> -->
 
   <div class="contact-us section" id="contact">
-    <div class="container">
+    <div  class="container">
       <div class="row">
         <div class="col-lg-6  align-self-center">
           <div class="section-heading">
             <!-- <h6>Contact Us</h6> -->
-            <h2>Feel free to contact us anytime</h2>
-            <p><b>Phone:</b>  0708 906 2327<br>
-              <b>Email:</b>  learnwithsuremercies@gmail.com<br>
-              <b>Location:</b>   We serve families in all Nigerian states and across the diaspora (home and online tutoring)<br>
-              <ul>
-                <li>Book a free consultation https://bit.ly/requestourservice or through WhatsApp @
-<a href="#">(bit.ly/WhatsAppSuremercies)</a></li>
-                <li>Start your child’s journey to success (https://bit.ly/TuteesRegForm )</li>
-                <li>Chat with us now <a href="#">(bit.ly/WhatsAppSuremercies)</a></li>
-              </ul>
-
+            <h2> Contact us </h2>
+            
+            <p><b><i class="fa-solid fa-phone-volume"></i>Phone:</b>  0708 906 2327<br>
+              <b> <i class="fa-solid fa-envelope"></i> Email:</b>  learnwithsuremercies@gmail.com<br>
+              <b> <i class="fa-solid fa-location-dot"></i> Location:</b>   We serve families in all Nigerian states and across the diaspora (home and online tutoring)<br>
+              <p>Book a free consultation https://bit.ly/requestourservice or through WhatsApp @ (bit.ly/WhatsAppSuremercies)
+Start your child’s journey to success (https://bit.ly/TuteesRegForm )
+Chat with us now (bit.ly/WhatsAppSuremercies)</p>
             
             
             </p>
@@ -937,24 +883,24 @@ launching their own apps, and exceeding expectations.</p>
     </div>
   </footer>
 
-  <!-- zoom -->
   <script>
-function showImage(element) {
-  const imgSrc = element.querySelector("img").src;
-  document.getElementById("modalImage").src = imgSrc;
-  document.getElementById("imageModal").style.display = "flex";
+  const images = document.querySelectorAll('.carousel-track img');
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
 
-  // Pause scrolling
-  document.getElementById("scrollTrack").style.animationPlayState = "paused";
-}
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = img.src;
+    });
+  });
 
-function closeModal() {
-  document.getElementById("imageModal").style.display = "none";
-
-  // Resume scrolling
-  document.getElementById("scrollTrack").style.animationPlayState = "running";
-}
+  function closeModal() {
+    modal.style.display = 'none';
+    modalImg.src = '';
+  }
 </script>
+
 
 
   <!-- Scripts -->

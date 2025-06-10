@@ -138,6 +138,7 @@ body {
   margin-bottom: 60px;
 }
 
+
 .section-heading h2 {
   font-size: 36px;
   font-weight: 600;
@@ -562,7 +563,7 @@ Header Style
 @media (max-width: 767px) {
   .background-header .main-nav .nav,
   .header-area .main-nav .nav {
-    background-color: #f1f0fe;
+    background-color: #fff;
   }
   .background-header .main-nav .nav li a,
   .header-area .main-nav .nav li a {
@@ -570,13 +571,13 @@ Header Style
     height: 50px;
     font-weight: 400;
     color: #1e1e1e;
-    background-color: #f1f0fe;
+    background-color: #fff;
      border-radius: 0px 0px 25px 25px;
   }
   .background-header .main-nav .nav li,
   .header-area .main-nav .nav li {
     border-top: 1px solid #ddd;
-    background-color: #f1f0fe;
+    background-color: #fff;
     height: 50px;
     border-radius: 0px 0px 25px 25px;
   }
@@ -869,7 +870,7 @@ About Style
   z-index: -1;
   width: 84%;
   height: 100%;
-  background-color: #f1f0fe;
+  background-color: #fff;
   content: '';
   border-top-left-radius: 500px;
   border-bottom-left-radius: 500px;
@@ -965,7 +966,7 @@ Courses Style
   border-radius: 50px;
   padding: 15px 40px;
   list-style: none;
-  margin: 0 auto 70px;
+  margin: 0 auto 20px;
   max-width: max-content;
 }
 
@@ -1041,7 +1042,7 @@ Courses Style
 }
 
 .events_item {
-  background-color: #f1f0fe;
+  background-color: #fff;
   border-radius: 25px;
   margin-bottom: 30px;
   position: relative;
@@ -1169,7 +1170,7 @@ Team Style
 .team-member .main-content {
   border-radius: 25px;
   padding: 140px 30px 40px 30px;
-  background-color: #f1f0fe;
+  background-color: #fff;
   text-align: center;
 }
 
@@ -1229,7 +1230,7 @@ Testimonials Style
   z-index: -1;
   width: 65%;
   height: 100%;
-  background-color: #f1f0fe;
+  background-color: #fff;
   content: '';
   border-top-left-radius: 500px;
   border-bottom-left-radius: 500px;
@@ -1327,7 +1328,7 @@ Events Style
 }
 
 .events .item {
-  background-color: #f1f0fe;
+  background-color: #fff;
   border-radius: 25px;
   position: relative;
   padding: 40px;
@@ -1414,7 +1415,7 @@ Contact Style
 */
 
 .contact-us {
-  margin-top: 80px;
+  margin-top: -40px;
   position: relative;
   padding: 50px 0px;
 }
@@ -1427,7 +1428,7 @@ Contact Style
   z-index: -1;
   width: 65%;
   height: 100%;
-  background-color: #f1f0fe;
+  background-color: #fff;
   content: '';
   border-top-right-radius: 500px;
   border-bottom-right-radius: 500px;
@@ -1756,7 +1757,7 @@ body {
     left: 65px;
   }
   .services {
-    margin-top: 80px;
+    margin-top: 20px;
   }
   .about-us {
     margin-top: 100px;
@@ -1791,7 +1792,7 @@ body {
     color: #fff;
   }
   .courses {
-    margin-top: 100px;
+    margin-top: -40px;
   }
   .event_filter ul li {
     display: block;
@@ -1872,7 +1873,7 @@ body {
     margin-right: 0px;
   }
   .contact-us .special-offer {
-    background-color: #f1f0fe;
+    background-color: #fff;
     margin-bottom: 60px;
     padding: 34px 30px 34px 100px;
     width: 100%;
